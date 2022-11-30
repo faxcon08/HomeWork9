@@ -80,6 +80,24 @@ public class Main {
             array[array.length-i-1]=temp;
         }
         System.out.println("Преобразованный массив"+Arrays.toString(array));
+
+        System.out.println(ANSI_RED+"1.8 Eighth Task"+ANSI_RESET); ///////////////// 1_8 //////////////////
+        array = new int [] {-6, 2, 5,-8, 8, 10, 4, -7, 12, 1};
+        int [] result = new int [] {Integer.MIN_VALUE,Integer.MIN_VALUE};
+        for (int i = 0; i < array.length-1; i++) {
+            for (int j = i+1; j < array.length; j++) {
+                if(array[i]+array[j] == -2){
+                    result[0]=array[i];
+                    result[1]=array[j];
+                    break;
+                }
+            }
+        }
+        System.out.println("Найдена пара чисел:"+Arrays.toString(result));
+
+        System.out.println(ANSI_RED+"1.9 Ninth Task"+ANSI_RESET); ///////////////// 1_9 //////////////////
+
+
     }// main
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
