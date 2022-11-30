@@ -64,13 +64,22 @@ public class Main {
             System.out.println();
         }
         System.out.println(ANSI_RED+"1.6 Sixth Task"+ANSI_RESET); ///////////////// 1_6 //////////////////
-        int array []= {5,4,3,2,1};
-        int reverseArray [] = new int [5];
+        int array []= {7,6,5,4,3,2,1};
+        int reverseArray [] = new int [array.length];
         for (int i = 0; i < array.length; i++) {
             reverseArray[i]=array[array.length-1-i];
         }
         System.out.println("Исходный массив: "+Arrays.toString(array));
         System.out.println("Преобразованный массив: "+Arrays.toString(reverseArray));
+
+        System.out.println(ANSI_RED+"1.6 Seventh Task"+ANSI_RESET); ///////////////// 1_7 //////////////////
+        System.out.println("Исходным массив"+Arrays.toString(array));
+        for (int i = 0; i <array.length/2; i++) {
+            int temp = array[i];
+            array[i]=array[array.length-i-1];
+            array[array.length-i-1]=temp;
+        }
+        System.out.println("Преобразованный массив"+Arrays.toString(array));
     }// main
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
