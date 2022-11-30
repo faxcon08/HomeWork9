@@ -57,5 +57,5 @@ public class Main {
             arr[i] = random.nextInt(100_000) + 100_000;
         }
         return arr;
-    } ////// Генератор 30 int-ов
+    } /////// Генератор 30 int-ов
 } // Main
