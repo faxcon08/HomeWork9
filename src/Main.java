@@ -43,12 +43,27 @@ public class Main {
         System.out.printf("Средняя сумма трат за месяц составила %1$,.2f рублей\n",averagePayment);
 
         System.out.println(ANSI_RED+"1.4 Fourth Task"+ANSI_RESET); ///////////////// 1_4 //////////////////
-
+        /*В результате в консоль должно быть выведено "Ivanov Ivan".*/
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length-1; i >=0 ; i--) {
             System.out.print(reverseFullName[i]);
         }
         System.out.println();
+
+
+        System.out.println(ANSI_RED+"1.5 Fifth Task"+ANSI_RESET); ///////////////// 1_5 //////////////////
+        int[][] matrix = new int[3][3];
+        for (int i = 0; i < matrix.length; i++) {
+            matrix[i][i]=1;
+            matrix[i][matrix.length-1-i]=1;
+        }
+        for (int[] row : matrix) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+        }
+
     }// main
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
