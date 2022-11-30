@@ -42,7 +42,13 @@ public class Main {
         double averagePayment = (double)totalPayments / payments.length;
         System.out.printf("Средняя сумма трат за месяц составила %1$,.2f рублей\n",averagePayment);
 
+        System.out.println(ANSI_RED+"1.4 Fourth Task"+ANSI_RESET); ///////////////// 1_4 //////////////////
 
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length-1; i >=0 ; i--) {
+            System.out.print(reverseFullName[i]);
+        }
+        System.out.println();
     }// main
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
