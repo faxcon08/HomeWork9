@@ -96,8 +96,20 @@ public class Main {
         System.out.println("Найдена пара чисел:"+Arrays.toString(result));
 
         System.out.println(ANSI_RED+"1.9 Ninth Task"+ANSI_RESET); ///////////////// 1_9 //////////////////
-
-
+        for (int i = 0; i < array.length-1; i++) {
+            for (int j = i+1; j < array.length; j++) {
+                if(array[i]+array[j] == -2){
+                    System.out.println("["+array[i]+","+array[j]+"]");
+                }
+            }
+        }
+        for (int i = array.length-1; i >0; i--) {
+            for (int j = i-1; j >=0; j--) {
+                if(array[i]+array[j] == -2){
+                    System.out.println("["+array[i]+","+array[j]+"]");
+                }
+            }
+        }
     }// main
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
