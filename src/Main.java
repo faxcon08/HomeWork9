@@ -11,6 +11,7 @@ public class Main {
         Нужно написать программу, которая решит эту задачу, и вывести в консоль результат
         в формате: «Сумма трат за месяц составила … рублей».*/
         int payments [] = generateRandomArray();
+        System.out.println("Наш массив: " + Arrays.toString(payments));
         int totalPayments = 0;
         for (int payment : payments) {
             totalPayments+=payment;
@@ -18,6 +19,18 @@ public class Main {
         System.out.println("Сумма трат за месяц составляет "+totalPayments+" рублей");
 
         System.out.println(ANSI_RED+"1.2 Second Task"+ANSI_RESET); ///////////////// 1_2 //////////////////
+        /*Следующая задача — найти минимальную и максимальную трату за день.
+                Нужно написать программу, которая решит эту задачу, и вывести в консоль результат
+        в формате: «Минимальная сумма трат за день составила … рублей. Максимальная сумма трат за день составила … рублей».*/
+
+        int maxPayment = Integer.MIN_VALUE, minPayment = Integer.MAX_VALUE;
+        for (int payment : payments) {
+            maxPayment = (maxPayment<payment)?payment:maxPayment;
+            minPayment = (minPayment>payment)? payment:minPayment;
+        }
+        System.out.println("Минимальная сумма трат за день составляет "+minPayment+" рублей. " +
+                "Максимальная сумма трат за день составляет "+maxPayment+" рублей");
+
         System.out.println(ANSI_RED+"1.3 Third Task"+ANSI_RESET); ///////////////// 1_3 //////////////////
 
 
